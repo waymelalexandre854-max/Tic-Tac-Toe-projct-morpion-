@@ -12,18 +12,29 @@
 - Axel : Secretary
 
 
-Problem to solve : devlopp a tic-tac-toe program with 3 level of difficulty of AI **
+**Problem to solve :** devlopp a tic-tac-toe program with 3 level of difficulty of AI **
 
-Initial objectives (11/02/2026):
+**Initial objectives (11/02/2026):**
 
-- Developp a player vs player mode:
+ **- Rules Setting :**
+ How to design the rules and features of this game (3 symboles in a raw , a three by three matrix)
+    The easiest part of the project
+[0,0,0]
+[0,0,0]     (0: empty , 1:player 1, 2: player 2 or IA in the IA mode)
+[0,0,0]
+    
+ **- Developp a player vs player mode:**
 How do you build a pvp mode where multiple people can interact between each other
 
-- AI development:
+ **- AI development:**
   How do you integrate an algorithm who can automatically play and interact with the player actions
   The most difficult part of the project: the group will have to reasearch more information about IA
 
-  - Rules Setting :
+ **Interface:** 
+ How to developp a technical and intuitive interface to help the player choose his own play style.
+
+Panel : 
+- PVP
+- IA
+- IA difficulty mode to choose
  
-    How to design the rules and features of this game (3 symboles in a raw , a three by three matrix)
-    The easiest part of the project
