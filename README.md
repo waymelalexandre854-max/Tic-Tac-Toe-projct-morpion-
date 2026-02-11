@@ -19,5 +19,11 @@ Initial objectives (11/02/2026):
 - Developp a player vs player mode:
 How do you build a pvp mode where multiple people can interact between each other
 
-- 
+- AI development:
+  How do you integrate an algorithm who can automatically play and interact with the player actions
+  The most difficult part of the project: the group will have to reasearch more information about IA
 
+  - Rules Setting :
+ 
+    How to design the rules and features of this game (3 symboles in a raw , a three by three matrix)
+    The easiest part of the project
