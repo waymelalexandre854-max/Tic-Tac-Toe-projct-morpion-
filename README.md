@@ -1,3 +1,5 @@
-# Tic-Tac-Toe-projct-morpion-
+# **📦 Tic-Tac-Toe-project-morpion**
 
-# Team members : Alexandre W , Axel , Raphäel W, Mathis 
+**MVP Status:** \[e.g., v1.0-Production]
+
+**Group Members:** Alexandre W, Raphaël W, Anne, Axel, Mathis
