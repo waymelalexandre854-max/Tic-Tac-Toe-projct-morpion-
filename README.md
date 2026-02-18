@@ -12,7 +12,7 @@
 - Axel : Secretary
 
 
-**Problem to solve :** devlopp a tic-tac-toe program with 3 level of difficulty of AI **
+**Problem to solve :** devlopp a tic-tac-toe program with multiple features like PVP or IA versus player**
 
 **Initial objectives (11/02/2026):**
 
