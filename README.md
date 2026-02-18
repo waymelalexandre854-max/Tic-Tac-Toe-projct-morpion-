@@ -19,23 +19,18 @@
  **- Rules Setting :**
  How to design the rules and features of this game (3 symboles in a raw , a three by three matrix)
     The easiest part of the project
-[0,0,0]
-[0,0,0]    
-[0,0,0]
-     (0: empty , 1:player 1, 2: player 2 or IA in the IA mode)
+    
+[0,0,0] \n [0,0,0] \n [0,0,0]     (0: empty , 1:player 1, 2: player 2 or IA in the IA mode)
 
 **Victory conditions :** 
 
 - *By each raw*: [1,1,1]
 - *By each column*:
-[1,X,X]
-[1,X,X]
-[1,X,X]
+[1,X,X] \n [1,X,X] \n [1,X,X]
 - *By diagonals*:
-[1,X,X]        [X,X,1]
-[X,1,X]        [X,1,X]
-[X,1,X]        [1,X,X]
-
+[1,X,X] \n [X,1,X] \n [X,1,X] 
+  
+[X,X,1] \n [1,X,X] \n [X,1,X]
  **- Developp a player vs player mode:**
 How do you build a pvp mode where multiple people can interact between each other
 
