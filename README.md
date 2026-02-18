@@ -16,7 +16,7 @@
 
 **Initial objectives (11/02/2026):**
 
-  **- Rules Setting :**
+ **- Rules Setting :**
  How to design the rules and features of this game (3 symboles in a raw , a three by three matrix)
  The easiest part of the project   
     
@@ -40,18 +40,18 @@
 [1,X,X],
 [X,1,X]]
 
- **- Developp a player vs player mode:**
+**- Developp a player vs player mode:**
 How do you build a pvp mode where multiple people can interact between each other
 *current status : done*
 
- **- AI development (IA versus player):**
+**- AI development (IA versus player):**
   How do you integrate an algorithm who can automatically play and interact with the player actions
   Possibly 
   The most difficult part of the project: the group will have to reasearch more information about IA
 *current status : in development*
 
 
- **Interface:** 
+**Interface:** 
  How to developp a technical and intuitive interface to help the player choose his own play style.
  Panel : 
 - PVP
