@@ -18,9 +18,10 @@
 
  **- Rules Setting :**
  How to design the rules and features of this game (3 symboles in a raw , a three by three matrix)
-    The easiest part of the project
-    
-[0,0,0] \n [0,0,0] \n [0,0,0]     (0: empty , 1:player 1, 2: player 2 or IA in the IA mode)
+    The easiest part of the project   
+[[0, 0, 0],
+ [0, 0, 0],
+ [0, 0, 0]]     (0: empty , 1:player 1, 2: player 2 or IA in the IA mode)
 
 **Victory conditions :** 
 
