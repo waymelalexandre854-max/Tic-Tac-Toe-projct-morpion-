@@ -52,7 +52,8 @@ How do you build a pvp mode where multiple people can interact between each othe
 
 
 **Interface:** 
- How to developp a technical and intuitive interface to help the player choose his own play style.
+ How to developp a technical and intuitive interface to help the player choose his own play style and make him enjoy the game.
+
  Panel : 
 - PVP
 - IA
