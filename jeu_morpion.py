@@ -1,9 +1,4 @@
 
-"""
-Created on Sat Feb 28 15:50:56 2026
-
-@author: ESME
-"""
 import sys
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QPushButton,
@@ -58,3 +53,4 @@ if __name__ == "__main__":
     window.show()
 
     sys.exit(app.exec_())
+
