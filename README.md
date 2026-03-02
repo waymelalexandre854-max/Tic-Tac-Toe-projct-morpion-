@@ -12,7 +12,7 @@
 - Axel : Secretary
 
 
-**Problem to solve :** developp a tic-tac-toe program with multiple features like PVP or IA versus player**
+**Problem to solve :** developp a tic-tac-toe program with multiple features like PVP or IA versus player with possibly different levels of difficulty
 
 **Initial objectives (11/02/2026):**
 
@@ -22,7 +22,7 @@
     
 [[0, 0, 0],
  [0, 0, 0],
- [0, 0, 0]]     (0: empty , 1:player 1, 2: player 2 or IA in the IA mode)
+ [0, 0, 0]]     (0: empty , 1:*player* 1, 2: *player 2 or IA in the IA mode*)
 
  **Victory conditions :** 
 
@@ -34,20 +34,20 @@
 - *By diagonals*:
 [[1,X,X],
 [X,1,X],
-[X,1,X]]
+[X,X,1]]
   
 [[X,X,1],
-[1,X,X],
-[X,1,X]]
+[X,1,X],
+[1,X,X]]
 
 **- Developp a player vs player mode:**
 How do you build a pvp mode where multiple people can interact between each other
+
 *current status : done*
 
 **- AI development (IA versus player):**
   How do you integrate an algorithm who can automatically play and interact with the player actions
-  Possibly 
-  The most difficult part of the project: the group will have to reasearch more information about IA
+  Possibly the most difficult part of the project: the group will have to reasearch more information about IA
 *current status : in development*
 
 
