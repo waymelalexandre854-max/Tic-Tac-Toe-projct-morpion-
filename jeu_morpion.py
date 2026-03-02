@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 """
 Created on Sat Feb 28 15:50:56 2026
 
@@ -56,4 +56,5 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MorpionUI()
     window.show()
+
     sys.exit(app.exec_())
