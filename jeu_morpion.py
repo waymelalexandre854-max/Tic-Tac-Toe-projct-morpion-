@@ -2,9 +2,11 @@ import sys
 from random import randint
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QPushButton,
-    QGridLayout, QVBoxLayout, QLabel
+    QGridLayout, QVBoxLayout, QLabel,
+    QMainWindow, QComboBox, QRadioButton, QButtonGroup
 )
 from PyQt5.QtCore import Qt
+
 
 
 def verifgame(List):
@@ -105,9 +107,70 @@ class MorpionUI(QWidget):
             for button in row:
                 button.setText("")
 
+class GameModeSelector(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Game Mode Selection")
+        self.setGeometry(100, 100, 300, 200)
+
+        central_widget = QWidget()
+        self.setCentralWidget(central_widget)
+        layout = QVBoxLayout()
+        central_widget.setLayout(layout)
+
+        self.mode_label = QLabel("Choose Game Mode:")
+        layout.addWidget(self.mode_label)
+
+        self.pvp_button = QRadioButton("PVP (Player vs Player)")
+        self.ia_button = QRadioButton("IA (Player vs AI)")
+        self.mode_group = QButtonGroup()
+        self.mode_group.addButton(self.pvp_button)
+        self.mode_group.addButton(self.ia_button)
+
+        layout.addWidget(self.pvp_button)
+        layout.addWidget(self.ia_button)
+
+        self.difficulty_label = QLabel("Choose AI Difficulty:")
+        self.difficulty_combo = QComboBox()
+        self.difficulty_combo.addItems(["Easy", "Medium", "Hard"])
+        layout.addWidget(self.difficulty_label)
+        layout.addWidget(self.difficulty_combo)
+
+        self.difficulty_label.hide()
+        self.difficulty_combo.hide()
+
+        self.ia_button.toggled.connect(self.toggle_difficulty)
+
+        self.start_button = QPushButton("Start Game")
+        layout.addWidget(self.start_button)
+
+        # Connexion du bouton Start
+        self.start_button.clicked.connect(self.start_game)
+
+    def toggle_difficulty(self, checked):
+        if checked:
+            self.difficulty_label.show()
+            self.difficulty_combo.show()
+        else:
+            self.difficulty_label.hide()
+            self.difficulty_combo.hide()
+
+    def start_game(self):
+        # Si mode PVP sélectionné
+        if self.pvp_button.isChecked():
+            self.morpion_window = MorpionUI()
+            self.morpion_window.show()
+            self.close()  # ferme la fenêtre de sélection
+
+        # Si IA sélectionné → ne rien faire pour l’instant
+        elif self.ia_button.isChecked():
+            print("Mode IA non implémenté pour le moment.")
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MorpionUI()
+    window = GameModeSelector()
     window.show()
     sys.exit(app.exec_())
+
+
