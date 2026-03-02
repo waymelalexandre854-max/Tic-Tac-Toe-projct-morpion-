@@ -48,7 +48,13 @@ How do you build a pvp mode where multiple people can interact between each othe
 **- AI development (IA versus player):**
   How do you integrate an algorithm who can automatically play and interact with the player actions
   Possibly the most difficult part of the project: the group will have to reasearch more information about IA
+
+Easy and medium IA difficulties are made without recursion and MidMax usage
+
+  
 *current status : in development*
+
+
 
 
 **Interface:** 
