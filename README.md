@@ -47,7 +47,19 @@ How do you build a pvp mode where multiple people can interact between each othe
 
 **- AI development (IA versus player):**
   How do you integrate an algorithm who can automatically play and interact with the player actions
-  Possibly the most difficult part of the project: the group will have to reasearch more information about IA
+  Possibly the most difficult part of the project: the group will have to reasearch more information about IA implementation: 
+
+  Easy IA mode : 
+  The bot choose at random the move after the player, win if it can win
+
+  Medium IA mode:
+  The bot calculates the odds of winning over 2 tree subdivision with highest score possible, win if it can win
+
+  Hard difficulty: 
+  
+The bot calculates the odds of winning over 5 + tree subdivisions with highest score possible, win if it can win 
+ 
+
 
 Easy and medium IA difficulties are made without recursion and MidMax usage
 
