@@ -1,4 +1,5 @@
 """AI easy tictactoe"""
+"""AI show nothing, it just take a choice depending on it's difficulty. Easy is mostly random"""
 
 def easy_AI(Grid):
     from random import choice
@@ -27,4 +28,5 @@ def easy_AI(Grid):
     for key,value in result_dico.items():
         if value == best_value:
             play_list.append(key)
+
     return choice(play_list)
