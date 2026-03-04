@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QApplication
-from model import MorpionGame, verifgame
-from view import MorpionUI, GameModeSelector
+from gamemodel import MorpionGame, verifgame
+from gameview import MorpionUI, GameModeSelector
 from random import randint
 # Controller is doing the interactions and the connections
 class MorpionController:
