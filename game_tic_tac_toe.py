@@ -1,3 +1,4 @@
+
 import sys
 from random import randint
 from PyQt5.QtWidgets import (
@@ -200,12 +201,17 @@ class MorpionUI(QWidget):
         self.player = randint(1, 2)
         self.game_over = False
         
-        self.init_ui()
 
         # If AI mode and AI starts first, play immediately
         if self.ai_mode and self.player == 2:
             from PyQt5.QtCore import QTimer
             QTimer.singleShot(200, self.ai_play)
+            
+        self.score_player1 = 0
+        self.score_player2 = 0
+        
+        self.init_ui()
+        
     def init_ui(self):
 
 
@@ -218,6 +224,13 @@ class MorpionUI(QWidget):
         self.status_label.setStyleSheet("color: white;")
         self.status_label.setAlignment(Qt.AlignCenter)
         main_layout.addWidget(self.status_label)
+        
+        self.score_label = QLabel(f"Score - Player 1: {self.score_player1} | Player 2: {self.score_player2}")
+        self.score_label.setFont(QFont("Montserrat", 14, QFont.Bold))
+        self.score_label.setStyleSheet("color: white;")
+        self.score_label.setAlignment(Qt.AlignCenter)
+        main_layout.addWidget(self.score_label)
+        
         self.reset_button = QPushButton("Restart")
         self.reset_button.setStyleSheet("""
             QPushButton {
@@ -229,7 +242,19 @@ class MorpionUI(QWidget):
         """)
         self.reset_button.clicked.connect(self.reset_game)
         main_layout.addWidget(self.reset_button)
-
+        
+        self.menu_button = QPushButton("Menu")
+        self.menu_button.setStyleSheet("""
+            QPushButton {
+               background-color: #34495e;
+               color: white;
+               border-radius: 15px;
+               padding: 10px;
+            }
+         """)
+        self.menu_button.clicked.connect(self.return_to_menu)
+        main_layout.addWidget(self.menu_button)
+        
         # Grid 3x3
         grid_layout = QGridLayout()
         for row in range(3):
@@ -243,6 +268,7 @@ class MorpionUI(QWidget):
                 row_buttons.append(button)
             self.buttons.append(row_buttons)
         main_layout.addLayout(grid_layout)
+        
 
 
     def play(self, row, col):
@@ -262,6 +288,12 @@ class MorpionUI(QWidget):
         if winner != 0:
             self.status_label.setText(f"Player {winner} wins !!")
             self.game_over = True
+    # Mise à jour du score
+            if winner == 1:
+              self.score_player1 += 1
+            else:
+              self.score_player2 += 1
+            self.score_label.setText(f"Score - Player 1: {self.score_player1} | Player 2: {self.score_player2}")
             return
 
         if all(self.Grid[i][j] != 0 for i in range(3) for j in range(3)):
@@ -311,6 +343,11 @@ class MorpionUI(QWidget):
         for row in self.buttons:
             for button in row:
                 button.setText("")
+                
+    def return_to_menu(self):
+       self.close()  # Ferme la fenêtre actuelle
+       self.menu_window = GameModeSelector()  # Crée une nouvelle fenêtre menu
+       self.menu_window.show()
 
 class GameModeSelector(QMainWindow):
     def __init__(self):
@@ -405,6 +442,3 @@ if __name__ == "__main__":
     window = GameModeSelector()
     window.show()
     sys.exit(app.exec_())
-
-
-
