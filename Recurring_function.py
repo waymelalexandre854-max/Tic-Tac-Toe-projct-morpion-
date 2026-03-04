@@ -16,7 +16,6 @@ def verifgame(List):
     return player
 
 """This function is only used for AI and create a Grid."""
-"""A problem found was that main list and the AI tree list was link and keep all information from modification, making impossible of creating a correct tree."""
 def create_new_Grid(Grid):
     retur_grid = [[0,0,0],[0,0,0],[0,0,0]]
     x = 0
@@ -44,7 +43,7 @@ def create_new_Grid(Grid):
     return retur_grid
 
 """This function is only used by the AI to have a list of possibilities in a tree branch."""
-"""The function don't make the whole tree, just some branch"""
+"""The function don't make the whole tree, just some node, and is specialised for tic tac toe game"""
 def create_tree(Grid,player):
     Tree = [Grid, []]
     for i in range (9):
@@ -60,4 +59,5 @@ def create_tree(Grid,player):
                 Grid_modif[2][i-6] = player
         Tree[1].append(Grid_modif)
         Grid_modif = [[0,0,0],[0,0,0],[0,0,0]]
+
     return Tree
