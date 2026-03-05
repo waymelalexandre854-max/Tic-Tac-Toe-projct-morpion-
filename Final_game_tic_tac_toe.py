@@ -321,11 +321,11 @@ class MorpionUI(QWidget):
             return
 
         Ai = None
-        if self.difficulty == "Facile": # will process differently depending wich difficulty is selected
+        if self.difficulty == "Easy": # will process differently depending wich difficulty is selected
             Ai = easy_AI(self.Grid)
-        elif self.difficulty == "Moyen":
+        elif self.difficulty == "Normal":
             Ai = normal_AI(self.Grid)
-        elif self.difficulty == "Difficile":
+        elif self.difficulty == "Hard":
             Ai = difficult_AI(self.Grid)
         else: # just in case it doesn't work
             Ai = easy_AI(self.Grid)
@@ -400,7 +400,7 @@ class GameModeSelector(QMainWindow):
         self.difficulty_label.setStyleSheet("color: white;")
         self.difficulty_combo = QComboBox() # allow to choose the difficulty
         self.difficulty_combo.setFont(QFont("Montserrat", 16))
-        self.difficulty_combo.addItems(["Facile", "Moyen", "Difficile"])
+        self.difficulty_combo.addItems(["Easy", "Normal", "Hard"])
         self.difficulty_combo.setStyleSheet("color: white")
         layout.addWidget(self.difficulty_label)
         layout.addWidget(self.difficulty_combo)
@@ -449,5 +449,4 @@ if __name__ == "__main__":
     window = GameModeSelector()
     window.show()
     sys.exit(app.exec_())
-
 
