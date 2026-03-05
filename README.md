@@ -50,7 +50,7 @@ How do you build a pvp mode where multiple people can interact between each othe
   Possibly the most difficult part of the project: the group will have to reasearch more information about IA implementation: 
 
   Easy IA mode : 
-  The bot choose at random the move after the player, win if it can win
+  The bot choose at random the move after the player(1 tree subdivision), win if it can win
 
   Medium IA mode:
   The bot calculates the odds of winning over 2 tree subdivision with highest score possible, win if it can win
@@ -64,7 +64,7 @@ The bot calculates the odds of winning over 5 + tree subdivisions with highest s
 Easy and medium IA difficulties are made without recursion and MidMax usage
 
   
-*current status : in development*
+*current status : done*
 
 
 
@@ -77,4 +77,4 @@ Easy and medium IA difficulties are made without recursion and MidMax usage
 - IA
 - IA difficulty mode to choose
  
-*current status : in development*
+*current status : done*
