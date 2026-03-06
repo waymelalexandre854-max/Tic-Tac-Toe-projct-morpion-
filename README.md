@@ -78,3 +78,7 @@ Easy and medium IA difficulties are made without recursion and MidMax usage
 - IA difficulty mode to choose
  
 *current status : done*
+
+
+
+Final objectives are the same that the initial , we manage to finish all the objectives we primally set
