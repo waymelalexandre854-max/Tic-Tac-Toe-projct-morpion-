@@ -74,7 +74,6 @@ def verifgame(List):
 
 def easy_AI(Grid):
     from random import choice        #choice from random give us a possibility from all possible one, resulting to a hazardous play
-    from Recurring_function import verifgame, create_tree
     play_list = []        #This is the list of possibilities that the AI have at the end, one is selected at the end
     best_value = 0        #The way to know what is the best way to win, put at 0 because the AI can't know player possibilities
     result_dico = {}        #Where we input all the result to know what is the move that have the best value
@@ -464,5 +463,6 @@ if __name__ == "__main__":
     window = GameModeSelector()
     window.show()
     sys.exit(app.exec_())
+
 
 
