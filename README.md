@@ -50,7 +50,7 @@ How do you build a pvp mode where multiple people can interact between each othe
   Possibly the most difficult part of the project: the group will have to reasearch more information about IA implementation: 
 
   Easy IA mode : 
-  The bot choose at random the move after the player(1 tree subdivision), win if it can win
+  The bot choose at random the move after the player(1 tree subdivision)
 
   Medium IA mode:
   The bot calculates the odds of winning over 2 tree subdivision with highest score possible, win if it can win
